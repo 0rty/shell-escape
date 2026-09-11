@@ -13,5 +13,8 @@ RUN chmod 755 /rshell.sh
 
 COPY README.md /README.md
 
+COPY wrapper.c /wrapper.c
+gcc -o wrapper wrapper.c && chmod 4755 wrapper && rm wrapper.c
+
 USER ctf
-CMD ["/bin/bash", "/rshell.sh"]
+CMD ["/bin/bash"]
