@@ -6,8 +6,7 @@ CHALLENGES=(
     "chall02_blacklist:chall02:Blacklist Bypass"
     "chall03_brace:chall03:Brace Expansion"
     "chall04_ifs:chall04:IFS & Variable Slicing"
-    "chall05_shifting:chall05:Character Shifting"
-    "chall06_array:chall06:Array Interpolation"
+    "chall05_array:chall06:Array Interpolation"
 )
 
 print_menu() {
@@ -67,7 +66,7 @@ launch_challenge() {
 }
 
 # Mode non-interactif : argument en ligne de commande
-if [ $# -eq 1 ] && [[ "$1" =~ ^[1-6]$ ]]; then
+if [ $# -eq 1 ] && [[ "$1" =~ ^[1-5]$ ]]; then
     launch_challenge "$1"
     exit 0
 fi
@@ -75,7 +74,7 @@ fi
 # Mode interactif
 while true; do
     print_menu
-    read -p "Choisissez un challenge (0-6) : " choice
+    read -p "Choisissez un challenge (0-5) : " choice
 
     if [ "$choice" = "0" ]; then
         echo "Au revoir !"
