@@ -14,12 +14,12 @@ while true; do
     [[ -z "$cmd" ]] && continue
     [[ "$cmd" == "exit" ]] && break
 
-    if echo "$cmd" | grep -qP '[ \t]'; then
+    if printf '%s' "$cmd" | grep -qP '[ \t]'; then
         echo "Caractère interdit : espace"
         continue
     fi
 
-    if echo "$cmd" | grep -qP '\$\{?IFS\}?'; then
+    if printf '%s' "$cmd" | grep -qP '\$\{?IFS\}?'; then
         echo "Mot-clé interdit : IFS"
         continue
     fi
