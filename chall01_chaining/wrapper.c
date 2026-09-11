@@ -3,10 +3,6 @@
 #include <string.h>
 #include <unistd.h>
 
-setuid(0);
-setgid(0);
-system(cmd);
-
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         printf("Usage: %s <ip>\n", argv[0]);
@@ -24,6 +20,8 @@ int main(int argc, char *argv[]) {
     char cmd[256];
     snprintf(cmd, sizeof(cmd), "ping -c 1 %s", input);
     printf("[*] Exécution : ping -c 1 %s\n", input);
+    setuid(0);
+    setgid(0);
     system(cmd);
     return 0;
 }
