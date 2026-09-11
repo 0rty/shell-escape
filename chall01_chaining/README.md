@@ -1,40 +1,34 @@
-# Challenge 01 — Command Chaining ⭐
+# Challenge 01 - Command Chaining
 
 ## Contexte
+An admin built a little tool to ping IP address from his server.
+He blocked some command like `|` and `&` to avoid injection, but did he forget something ?
 
-Un administrateur a développé un petit outil pour ping des adresses IP depuis un serveur.
-Il a pensé à bloquer les caractères `|` et `&` pour éviter les injections... mais a-t-il pensé à tout ?
+## Goal
 
-## Objectif
+Read the content of `/flag.txt`.
 
-Lire le contenu du fichier `/flag.txt`.
-
-## Lancement du challenge
+## Start the challenge
 
 ```bash
 docker build -t chall01 .
 docker run -it --rm chall01
 ```
 
-Une fois dans le container :
-```bash
-./wrapper <ip>
-```
-
-## Indice 1 (si vous bloquez)
+## Hint 1
 
 <details>
-<summary>Révéler l'indice</summary>
-Il existe d'autres façons de chaîner des commandes en Bash que `|` et `&`...
+<summary>Hint</summary>
+Find other way to chain commands
 </details>
 
-## Indice 2
+## Hint 2
 
 <details>
-<summary>Révéler l'indice</summary>
-Que fait le caractère `;` en Bash ? Et les sauts de ligne ?
+<summary>Hint</summary>
+What does the char `;` or `\n` ?
 </details>
 
-## Format du flag
+## Flag format
 
 `HackUTT{...}`
