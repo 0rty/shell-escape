@@ -3,6 +3,9 @@
 #include <string.h>
 #include <unistd.h>
 
+setuid(0);
+setgid(0);
+system(cmd);
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
