@@ -31,8 +31,7 @@ docker --version
 | 02 | `chall02_blacklist` | Blacklist bypass |
 | 03 | `chall03_brace` | Bash Brace Expansion |
 | 04 | `chall04_ifs` | using env var |
-| 05 | `chall05_shifting` | Character Shifting ASCII |
-| 06 | `chall06_array` | Array Interpolation / Quoted Injection |
+| 05 | `chall06_array` | Array Interpolation / Quoted Injection |
 
 ---
 
