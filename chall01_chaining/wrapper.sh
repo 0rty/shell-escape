@@ -1,6 +1,5 @@
 #!/bin/bash
-# Version script (pour debug / compréhension)
-# Équivalent fonctionnel du wrapper C
+
 
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <ip>"
@@ -10,7 +9,7 @@ fi
 
 INPUT="$1"
 
-# Filtre basique
+
 if echo "$INPUT" | grep -qP '[|&]'; then
     echo "Caractère interdit détecté !"
     exit 1
