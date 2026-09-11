@@ -1,7 +1,7 @@
 #!/bin/bash
 # Shell restreint - Challenge 04 : Variable Expansion
-# Whitelist stricte : uniquement alphanumérique + tiret + underscore + point
-# Mais system() appelle sh qui développe les variables APRÈS le filtre...
+# Bloque les espaces et slashes littéraux
+# Mais $, {, } sont autorisés... les variables d'environnement sont tes amies
 
 echo "============================================"
 echo " Challenge 04 — Shell restreint v1.0"
@@ -14,16 +14,10 @@ while true; do
     [[ -z "$cmd" ]] && continue
     [[ "$cmd" == "exit" ]] && break
 
-    if echo "$cmd" | grep -qP '[^a-zA-Z0-9\-_\.]'; then
-        echo "Caractère non autorisé ! Uniquement : a-z A-Z 0-9 - _ ."
+    if printf '%s' "$cmd" | grep -qP '[ \t/]'; then
+        echo "Caractère interdit : espace ou slash"
         continue
     fi
 
-    if echo "$cmd" | grep -qiP '(flag|cat|root|passwd|shadow)'; then
-        echo "Mot interdit !"
-        continue
-    fi
-
-    # eval développe les variables d'environnement APRÈS le filtre
     eval "$cmd"
 done
