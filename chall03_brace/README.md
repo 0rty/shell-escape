@@ -1,4 +1,4 @@
-# Challenge 03 — Bash Brace Expansion ⭐⭐
+# Challenge 03 - Bash Brace Expansion
 
 ## Contexte
 
