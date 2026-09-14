@@ -1,4 +1,4 @@
-# Challenge 04 — ${IFS}, ${PATH:0:1}, ${LS_COLORS:10:1} ⭐⭐⭐
+# Challenge 04 — ${IFS}, ${PATH:0:1}, ${LS_COLORS:10:1}
 
 ## Contexte
 
