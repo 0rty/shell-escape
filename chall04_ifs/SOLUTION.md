@@ -2,5 +2,5 @@
 With some env var you can substitute characters that are initially blacklisted.
 `${IFS}` will replace the `space` and `${PATH:0:1}` will replace the `/`
 ```
-cat${IFS}${PATH:0:1}
+cat${IFS}${PATH:0:1}flag.txt
 ```
