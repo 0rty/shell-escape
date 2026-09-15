@@ -6,7 +6,7 @@
 # L'entrée utilisateur est "sécurisée" entre guillemets doubles...
 # mais les guillemets doubles ne protègent pas contre TOUT.
 
-PASS="$(cat /secret_key.txt 2>/dev/null || echo 'HackUTT{4rr4y_1nj3ct10n_w0w}')"
+PASS="$(cat /flag.txt 2>/dev/null || echo 'HackUTT{4rr4y_1nj3ct10n_w0w}')"
 
 declare -A scores
 scores["alice"]=100
