@@ -1,5 +1,5 @@
 #!/bin/bash
-# Challenge 06 - Array Interpolation
+# Challenge 05 - Array Interpolation
 
 declare -A scores
 scores["alice"]=100
