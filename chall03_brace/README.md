@@ -2,7 +2,7 @@
 For this challenge, you'll need to use brace expansion. Commands are still forbidden because of filters on different characters.
 For exemple:
 ```
-echo flag.{txt,pdf,jpg}
+> echo flag.{txt,pdf,jpg}
 flag.txt flag.pdf flag.jpg
 ```
 
